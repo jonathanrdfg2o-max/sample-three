@@ -6,7 +6,7 @@ Task::Task(std::string name, int priority, Callback cb)
     : m_name(std::move(name)), m_priority(priority), m_callback(std::move(cb)) {}
 
 void Task::run() const {
-    std::cout << "[RUN] Task: " << m_name << std::endl;
+    std::cout << "[RUN] " << m_name << std::endl;
     m_callback();
 }
 

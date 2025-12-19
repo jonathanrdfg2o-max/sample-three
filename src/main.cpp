@@ -1,17 +1,19 @@
 
 #include "Scheduler.hpp"
 #include <iostream>
+#include <chrono>
+#include <thread>
 
 int main() {
     Scheduler scheduler;
     scheduler.start();
 
-    scheduler.submit(Task("High Priority", 10, [] {
-        std::cout << "Executing high priority task" << std::endl;
+    scheduler.submit(Task("Render Job", 10, [] {
+        std::cout << "Rendering frame..." << std::endl;
     }));
 
-    scheduler.submit(Task("Low Priority", 1, [] {
-        std::cout << "Executing low priority task" << std::endl;
+    scheduler.submit(Task("Cleanup", 1, [] {
+        std::cout << "Cleanup job" << std::endl;
     }));
 
     std::this_thread::sleep_for(std::chrono::seconds(1));

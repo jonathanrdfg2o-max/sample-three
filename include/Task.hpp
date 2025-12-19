@@ -2,7 +2,6 @@
 #pragma once
 #include <functional>
 #include <string>
-#include <vector>
 
 class Task {
 public:
@@ -11,7 +10,6 @@ public:
     Task(std::string name, int priority, Callback cb);
 
     void run() const;
-
     int priority() const;
     const std::string& name() const;
 

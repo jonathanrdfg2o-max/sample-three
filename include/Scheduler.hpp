@@ -14,14 +14,13 @@ public:
 
     void start();
     void stop();
-
     void submit(Task task);
 
 private:
     void worker();
 
     struct TaskCompare {
-        bool operator()(const Task& a, const Task& b) {
+        bool operator()(const Task& a, const Task& b) const {
             return a.priority() < b.priority();
         }
     };
