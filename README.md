@@ -44,12 +44,11 @@ Linux / macOS / Windows
 
 Docker یا WSL برای اجرای ایزوله
 
- نصب و اجرا (CLI)
-Build با CMake
+ ## ▶️ نصب و اجرا (CLI)
+
+### Build با CMake
+```bash
 mkdir build
 cd build
 cmake ..
 cmake --build . --config Release
-
-اجرا
-./task_scheduler
