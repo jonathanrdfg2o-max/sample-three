@@ -1,19 +1,19 @@
 
 #include "Scheduler.hpp"
-#include <iostream>
-#include <chrono>
 #include <thread>
+#include <chrono>
+#include <iostream>
 
 int main() {
     Scheduler scheduler;
     scheduler.start();
 
-    scheduler.submit(Task("Render Job", 10, [] {
+    scheduler.submit(Task("Render", 10, [] {
         std::cout << "Rendering frame..." << std::endl;
     }));
 
-    scheduler.submit(Task("Cleanup", 1, [] {
-        std::cout << "Cleanup job" << std::endl;
+    scheduler.submit(Task("PostProcess", 5, [] {
+        std::cout << "Post processing..." << std::endl;
     }));
 
     std::this_thread::sleep_for(std::chrono::seconds(1));
