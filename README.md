@@ -7,8 +7,8 @@ Local Event-Driven Task Scheduler (C++ / CLI)
 
 پروژه به‌صورت CLI اجرا می‌شود و فاقد Live URL است؛ خروجی اجرای واقعی آن در محیط Cloud (Render) در تصویر زیر قابل مشاهده است.
 
-[📷 Render Execution Output
-](https://github.com/jonathanrdfg2o-max/sample-three/blob/main/docs/Render.png)(مشاهده در مسیر docs/Render.png)
+![Render Execution Output](docs/Render.png)
+
 
  ویژگی‌ها
 
